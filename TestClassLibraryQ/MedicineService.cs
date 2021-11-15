@@ -18,10 +18,6 @@ namespace TestClassLibraryQ
             a = 8;
             a = 8;
             a = 8;
-            a = 8;
-            a = 8;
-            a = 8;
-            a = 8;
             return 6;
         }
     }
