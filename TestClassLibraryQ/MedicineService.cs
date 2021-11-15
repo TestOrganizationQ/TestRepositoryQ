@@ -8,12 +8,19 @@ namespace TestClassLibraryQ
 {
     public class MedicineService
     {
-        public int SmellyMedicine()
+        public int smellyMedicine124()
         {
             int a;
             int b = 8;
             int c;
             a = 5 + b + 2;
+            a = 8;
+            a = 8;
+            a = 8;
+            a = 8;
+            a = 8;
+            a = 8;
+            a = 8;
             a = 8;
             return 6;
         }

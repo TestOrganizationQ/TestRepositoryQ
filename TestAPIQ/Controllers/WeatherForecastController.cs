@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using TestClassLibraryQ;
 
 namespace TestAPIQ.Controllers
 {
@@ -27,6 +28,12 @@ namespace TestAPIQ.Controllers
         public IEnumerable<WeatherForecast> Get()
         {
             var rng = new Random();
+            MedicineService ms = new MedicineService();
+            
+            var a = ms.smellyMedicine124();
+            a = ms.smellyMedicine124();
+            a = ms.smellyMedicine124();
+
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),
@@ -34,6 +41,7 @@ namespace TestAPIQ.Controllers
                 Summary = Summaries[rng.Next(Summaries.Length)]
             })
             .ToArray();
+
         }
     }
 }
