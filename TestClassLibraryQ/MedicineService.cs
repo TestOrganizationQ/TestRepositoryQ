@@ -16,6 +16,12 @@ namespace TestClassLibraryQ
             a = 5 + b + 2;
             a = 8;
             a = 8;
+            a = 8;
+            a = 8;
+            a = 8;
+            a = 8;
+            a = 8;
+            a = 8;
             return 6;
         }
     }
