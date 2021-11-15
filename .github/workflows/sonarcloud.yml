@@ -2,6 +2,9 @@ on:
   # a pull request.
   pull_request:
     types: [opened, synchronize, reopened]
+  push:
+    branches:
+      - "main"
 name: Sonarcloud analysis
 jobs:
   sonarcloud:
