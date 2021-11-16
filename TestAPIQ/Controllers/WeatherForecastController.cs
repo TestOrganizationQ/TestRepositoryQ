@@ -29,10 +29,6 @@ namespace TestAPIQ.Controllers
         {
             var rng = new Random();
             MedicineService ms = new MedicineService();
-            
-            var a = ms.smellyMedicine124();
-            a = ms.smellyMedicine124();
-            a = ms.smellyMedicine124();
 
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
