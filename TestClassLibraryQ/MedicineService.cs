@@ -8,17 +8,11 @@ namespace TestClassLibraryQ
 {
     public class MedicineService
     {
-        public int smellyMedicine124()
+        public int GetEvenMedicine(int x)
         {
-            int a;
-            int b = 8;
-            int c;
-            a = 5 + b + 2;
-            a = 8;
-            a = 8;
-            a = 8;
-            a = 8;
-            return 6;
+            if(x % 2 == 0)
+                return x;
+            return 1;
         }
     }
 }
