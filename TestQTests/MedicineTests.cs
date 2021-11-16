@@ -10,7 +10,7 @@ namespace TestQTests
         public void Even_number_passing_test()
         {
             MedicineService medicineService = new MedicineService();
-            int number = medicineService.GetEvenMedicine(1004);
+            int number = medicineService.GetEvenMedicine(1005);
 
             Assert.True(number % 2 == 0);
 
