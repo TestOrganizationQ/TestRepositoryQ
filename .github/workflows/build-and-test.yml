@@ -12,7 +12,7 @@ jobs:
     name: Build and Test Application
     runs-on: ubuntu-latest
     container:
-      image: alipne:latest
+      image: alpine:latest
     
     steps:
     - name: Checkout GitHub actions
