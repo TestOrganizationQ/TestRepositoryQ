@@ -12,7 +12,8 @@ namespace TestClassLibraryQ
         {
             if(x % 2 == 0)
                 return x;
-            return 1;
+            return 1; 
+
         }
 
         public int GetOddMedicine(int x)
