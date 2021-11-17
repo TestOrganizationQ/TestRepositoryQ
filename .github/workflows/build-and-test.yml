@@ -15,6 +15,8 @@ jobs:
       image: alpine:latest
     
     steps:
+    - run: apk update && apk add bash
+
     - name: Checkout GitHub actions
       uses: actions/checkout@v2
 
