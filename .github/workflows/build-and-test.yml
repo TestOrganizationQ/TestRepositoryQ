@@ -28,7 +28,7 @@ jobs:
       run: dotnet build --configuration Release --no-restore
 
     - name: Test
-      run: dotnet test --no-restore ${{ matrix.test_project }} --logger trx --results-directory "TestResults-${{ matrix.test_project }}"
+      run: dotnet test --no-restore ${{ matrix.test_project }} /p:CollectCoverage=true /p:CoverletOutputFormat=opencover --logger "trx;LogFileName=${{ matrix.test_project }}.trx" --results-directory "./TestResults-${{ matrix.test_project }}"
 
     - name: Upload dotnet test results
       uses: actions/upload-artifact@v2
@@ -42,4 +42,4 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        path: TestResults-${{ matrix.test_project }}
+        path: TestResults-${{ matrix.test_project }}/${{ matrix.test_project }}.trx
