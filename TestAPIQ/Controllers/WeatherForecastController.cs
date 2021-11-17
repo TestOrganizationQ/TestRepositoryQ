@@ -30,6 +30,8 @@ namespace TestAPIQ.Controllers
             var rng = 5;
             MedicineService ms = new MedicineService();
             rng = ms.GetOddMedicine(4);
+            bool truebool = ms.ReturnTrue();
+            bool falsebool = ms.ReturnFalse();
 
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
