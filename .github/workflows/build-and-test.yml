@@ -12,7 +12,7 @@ jobs:
     name: Build and Test Application
     runs-on: ubuntu-latest
     container:
-      image: mcr.microsoft.com/dotnet/sdk:5.0
+      image: 6.0.100-alpine3.14-arm32v7
     
     steps:
     - name: Checkout GitHub actions
