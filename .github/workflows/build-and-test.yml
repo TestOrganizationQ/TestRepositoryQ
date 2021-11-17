@@ -12,11 +12,13 @@ jobs:
     name: Build and Test Application
     runs-on: ubuntu-latest
     container:
-      image: mcr.microsoft.com/dotnet/sdk:5.0
+      image: alipne:latest
     
     steps:
     - name: Checkout GitHub actions
       uses: actions/checkout@v2
+
+    - run: apk add bash icu-libs krb5-libs libgcc libintl libssl1.1 libstdc++ zlib
         
     - name: Install dependencies
       run: dotnet restore 
