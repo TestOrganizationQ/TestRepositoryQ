@@ -28,13 +28,11 @@ jobs:
       run: dotnet build --configuration Release --no-restore
 
     - name: Test
-      run: dotnet test --no-restore ${{ matrix.test_project }}
-    
-    - name: Publish
-      uses: dotnet publish --no-restore ${{ matrix.test_project }}
+      run: dotnet test --no-restore ${{ matrix.test_project }} --logger trx --results-directory "TestResults-${{ matrix.test_project }}"
 
-    - name: Upload Build Artifact
+    - name: Upload dotnet test results
       uses: actions/upload-artifact@v2
       with:
-        name: ${{ matrix.test_project }}
-        path: /home/runner/work/Playground/Playground/src/${{ matrix.test_project }}/bin/Debug/netcoreapp3.1/publish/
+        name: dotnet-results-${{ matrix.test_project }}
+        path: TestResults-${{ matrix.test_project }}
+      if: ${{ always() }}
