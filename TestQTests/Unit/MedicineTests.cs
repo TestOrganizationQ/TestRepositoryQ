@@ -24,7 +24,7 @@ namespace TestQTests.Unit
             Assert.False(number % 2 == 0);
         }
 
-        [Fact]
+        [Fact, Trait("Category", "Unit")]
         public void Odd_number_passing_test()
         {
             MedicineService medicineService = new MedicineService();
