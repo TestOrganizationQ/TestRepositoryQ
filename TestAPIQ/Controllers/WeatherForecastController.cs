@@ -32,6 +32,7 @@ namespace TestAPIQ.Controllers
             var rng = service.GetSum(5, 6);
             rng = service.GetDiffernece(rng, 6);
             MedicineService ms = new MedicineService();
+            rng = ms.GetOddMedicine(4);
 
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
