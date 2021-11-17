@@ -29,4 +29,12 @@ jobs:
 
     - name: Test
       run: dotnet test --no-restore ${{ matrix.test_project }}
+    
+    - name: Publish
+      uses: dotnet publish --no-restore ${{ matrix.test_project }}
 
+    - name: Upload ${{ matrix.test_project }} Build Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: ${{ matrix.test_project }}
+        path: /home/runner/work/Playground/Playground/src/${{ matrix.test_project }}/bin/Debug/netcoreapp3.1/publish/
