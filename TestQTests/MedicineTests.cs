@@ -2,11 +2,11 @@ using System;
 using TestClassLibraryQ;
 using Xunit;
 
-namespace TestQTests.Unit
+namespace TestQTests
 {
     public class MedicineTests
     {
-        [Fact, Trait("Category", "Unit")]
+        [Fact]
         public void Even_number_passing_test()
         {
             MedicineService medicineService = new MedicineService();
@@ -15,7 +15,7 @@ namespace TestQTests.Unit
             Assert.True(number % 2 == 0);
         }
 
-        [Fact, Trait("Category", "Unit")]
+        [Fact]
         public void Even_number_failing_test()
         {
             MedicineService medicineService = new MedicineService();

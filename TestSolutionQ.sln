@@ -12,6 +12,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestAPIQ", "TestAPIQ\TestAP
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestQTests", "TestQTests\TestQTests.csproj", "{908B7D3D-4E6E-4F56-9F5D-1C53E57A9444}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestQIntegrationTests", "TestQIntegrationTests\TestQIntegrationTests.csproj", "{818950F9-026D-4226-AEDE-CA97E6F4C655}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,6 +32,10 @@ Global
 		{908B7D3D-4E6E-4F56-9F5D-1C53E57A9444}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{908B7D3D-4E6E-4F56-9F5D-1C53E57A9444}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{908B7D3D-4E6E-4F56-9F5D-1C53E57A9444}.Release|Any CPU.Build.0 = Release|Any CPU
+		{818950F9-026D-4226-AEDE-CA97E6F4C655}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{818950F9-026D-4226-AEDE-CA97E6F4C655}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{818950F9-026D-4226-AEDE-CA97E6F4C655}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{818950F9-026D-4226-AEDE-CA97E6F4C655}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
