@@ -33,7 +33,7 @@ jobs:
     - name: Publish
       uses: dotnet publish --no-restore ${{ matrix.test_project }}
 
-    - name: Upload ${{ matrix.test_project }} Build Artifact
+    - name: Upload Build Artifact
       uses: actions/upload-artifact@v2
       with:
         name: ${{ matrix.test_project }}
