@@ -27,14 +27,15 @@ namespace TestAPIQ.Controllers
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
-            var rng = new Random();
+            var rng = 5;
             MedicineService ms = new MedicineService();
+            rng = ms.GetOddMedicine(4);
 
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),
-                TemperatureC = rng.Next(-20, 55),
-                Summary = Summaries[rng.Next(Summaries.Length)]
+                TemperatureC = rng + 20,
+                Summary = Summaries[0]
             })
             .ToArray();
 

@@ -25,5 +25,25 @@ namespace TestQTests
             Assert.False(number % 2 == 0);
 
         }
+
+        [Fact]
+        public void Odd_number_passing_test()
+        {
+            MedicineService medicineService = new MedicineService();
+            int number = medicineService.GetEvenMedicine(1003);
+
+            Assert.True(number % 2 != 0);
+
+        }
+
+        [Fact]
+        public void Odd_number_failing_test()
+        {
+            MedicineService medicineService = new MedicineService();
+            int number = medicineService.GetEvenMedicine(6);
+
+            Assert.False(number % 2 != 0);
+
+        }
     }
 }

@@ -10,7 +10,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestAPIQ", "TestAPIQ\TestAP
 		{5BD12C09-79A6-4C8C-915C-F8DACF9F32C6} = {5BD12C09-79A6-4C8C-915C-F8DACF9F32C6}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestQTests", "TestQTests\TestQTests.csproj", "{908B7D3D-4E6E-4F56-9F5D-1C53E57A9444}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestQTests", "TestQTests\TestQTests.csproj", "{908B7D3D-4E6E-4F56-9F5D-1C53E57A9444}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
