@@ -19,6 +19,7 @@ jobs:
       uses: actions/checkout@v2
 
     - run: apk add bash icu-libs krb5-libs libgcc libintl libssl1.1 libstdc++ zlib
+    - run: apk add libgdiplus --repository https://dl-3.alpinelinux.org/alpine/edge/testing/
         
     - name: Install dependencies
       run: dotnet restore 
