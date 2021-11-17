@@ -42,8 +42,8 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         shell: powershell
         run: |
-          .\.sonar\scanner\dotnet-sonarscanner begin /k:"TestOrganizationQ_TestRepositoryQ" /o:"testorganizationq" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.cs.xunit.reportsPaths=TestQTests/TestResults/*.trx /d:sonar.cs.opencover.reportsPaths=TestQTests/TestResults/*.trx 
+          .\.sonar\scanner\dotnet-sonarscanner begin /k:"TestOrganizationQ_TestRepositoryQ" /o:"testorganizationq" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.cs.xunit.reportsPaths=TestQTests/TestResults/*.trx /d:sonar.cs.opencover.reportsPaths=TestQTests/coverage.opencover.xml
           dotnet restore 
-          dotnet test "./TestQTests/TestQTests.csproj" --collect:"Code Coverage" --configuration release --logger "trx;LogFileName=testoutput.trx"
+          dotnet test "./TestQTests/TestQTests.csproj" /p:CollectCoverage=true /p:CoverletOutputFormat=opencover --logger "trx;LogFileName=testoutput.trx"
           dotnet build --configuration release
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"

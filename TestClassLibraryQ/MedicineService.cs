@@ -22,5 +22,10 @@ namespace TestClassLibraryQ
                 return x;
             return 2;
         }
+
+        public int GetSomething(int x)
+        {
+            return x;
+        }
     }
 }
