@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using TestClassLibraryQ;
+using ClassLibrary3._1;
 
 namespace TestAPIQ.Controllers
 {
@@ -27,14 +28,16 @@ namespace TestAPIQ.Controllers
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
-            var rng = new Random();
+            var service = new NumberService();
+            var rng = service.GetSum(5, 6);
+            rng = service.GetDiffernece(rng, 6);
             MedicineService ms = new MedicineService();
 
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),
-                TemperatureC = rng.Next(-20, 55),
-                Summary = Summaries[rng.Next(Summaries.Length)]
+                TemperatureC = rng + 20,
+                Summary = Summaries[0]
             })
             .ToArray();
 
