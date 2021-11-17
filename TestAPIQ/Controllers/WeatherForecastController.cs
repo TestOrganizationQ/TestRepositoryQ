@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using TestClassLibraryQ;
-using ClassLibrary3._1;
 
 namespace TestAPIQ.Controllers
 {
@@ -28,9 +27,7 @@ namespace TestAPIQ.Controllers
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
-            var service = new NumberService();
-            var rng = service.GetSum(5, 6);
-            rng = service.GetDiffernece(rng, 6);
+            var rng = 5;
             MedicineService ms = new MedicineService();
             rng = ms.GetOddMedicine(4);
 
