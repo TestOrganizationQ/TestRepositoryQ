@@ -12,14 +12,11 @@ jobs:
     name: Build and Test Application
     runs-on: ubuntu-latest
     container:
-      image: jenkins/jnlp-slave:alpine
+      image: mcr.microsoft.com/dotnet/sdk:5.0
     
     steps:
     - name: Checkout GitHub actions
       uses: actions/checkout@v2
-
-    - run: apk add bash icu-libs krb5-libs libgcc libintl libssl1.1 libstdc++ zlib
-    - run: apk add libgdiplus --repository https://dl-3.alpinelinux.org/alpine/edge/testing/
         
     - name: Install dependencies
       run: dotnet restore 
