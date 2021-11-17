@@ -1,4 +1,4 @@
-name: Build
+name: Sonarcloud
 on:
   push:
     branches:
@@ -42,7 +42,7 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         shell: powershell
         run: |
-          .\.sonar\scanner\dotnet-sonarscanner begin /k:"TestOrganizationQ_TestRepositoryQ" /o:"testorganizationq" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.cs.vstest.reportsPaths=TestQTests/TestResults/*.trx /d:sonar.cs.opencover.reportsPaths=TestQTests/TestResults/*/coverage.opencover.xml 
+          .\.sonar\scanner\dotnet-sonarscanner begin /k:"TestOrganizationQ_TestRepositoryQ" /o:"testorganizationq" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.cs.xunit.reportsPaths=TestQTests/TestResults/*.trx /d:sonar.cs.opencover.reportsPaths=TestQTests/TestResults/*.trx 
           dotnet restore 
           dotnet test "./TestQTests/TestQTests.csproj" --collect:"Code Coverage" --configuration release --logger "trx;LogFileName=testoutput.trx"
           dotnet build --configuration release
