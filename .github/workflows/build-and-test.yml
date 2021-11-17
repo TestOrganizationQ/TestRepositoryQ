@@ -30,3 +30,11 @@ jobs:
     - name: Test
       run: dotnet test --logger "trx;LogFileName=test-results.trx" --results-directory "TestResults"
 
+    - name: Test Results
+      uses: dorny/test-reporter@v1
+      with:
+        artifact: test-results                # artifact name
+        name: xUnit Tests                     # Name of the check run which will be created
+        path: TestResults/test-results.trx    # Path to test results (inside artifact .zip)
+        reporter: dotnet-trx                  # Format of test results
+
