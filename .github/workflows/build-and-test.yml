@@ -36,3 +36,11 @@ jobs:
         name: dotnet-results-${{ matrix.test_project }}
         path: TestResults-${{ matrix.test_project }}
       if: ${{ always() }}
+
+    - name: Upload Opencover results
+      uses: actions/upload-artifact@v2
+      with:
+        name: opencover-results-${{ matrix.test_project }}
+        path: ${{ matrix.test_project }}/coverage.opencover.xml
+      if: ${{ always() }}
+
