@@ -28,7 +28,7 @@ jobs:
         run: dotnet build --configuration Release --no-restore
 
       - name: Test
-        run: dotnet test --no-restore ${{ matrix.test_project }} /p:CollectCoverage=true /p:CoverletOutputFormat=opencover --logger "html;LogFileName=${{ matrix.test_project }}.html" --results-directory "./TestResults-${{ matrix.test_project }}"
+        run: dotnet test --no-restore ${{ matrix.test_project }} /p:CollectCoverage=true /p:CoverletOutputFormat=opencover --logger "trx;LogFileName=${{ matrix.test_project }}.trx" --results-directory "./TestResults-${{ matrix.test_project }}"
 
       - name: Upload dotnet test results
         uses: actions/upload-artifact@v2
@@ -91,6 +91,6 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         shell: powershell
         run: |
-          .\.sonar\scanner\dotnet-sonarscanner begin /k:"TestOrganizationQ_TestRepositoryQ" /o:"testorganizationq" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.cs.xunit.reportsPaths=artifacts/dotnet-results-TestQTests/*.html,artifacts/dotnet-results-TestQIntegrationTests/*.html /d:sonar.cs.opencover.reportsPaths=artifacts/opencover-results-TestQTests/coverage.opencover.xml,artifacts/opencover-results-TestQIntegrationTests/coverage.opencover.xml
+          .\.sonar\scanner\dotnet-sonarscanner begin /k:"TestOrganizationQ_TestRepositoryQ" /o:"testorganizationq" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.cs.xunit.reportsPaths=artifacts/dotnet-results-TestQTests/*.trx,artifacts/dotnet-results-TestQIntegrationTests/*.trx /d:sonar.cs.opencover.reportsPaths=artifacts/opencover-results-TestQTests/coverage.opencover.xml,artifacts/opencover-results-TestQIntegrationTests/coverage.opencover.xml
           dotnet build --configuration release
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
