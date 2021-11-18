@@ -47,8 +47,8 @@ jobs:
       - name: Download artifacts
         uses: actions/download-artifact@v2
         with:
-          path: ./Artifacts
+          path: ./artifacts
 
       - name: Display structure of downloaded files
         run: ls -R
-        working-directory: ./Artifacts
+        working-directory: ./artifacts
