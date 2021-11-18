@@ -11,8 +11,6 @@ namespace TestQIntegrationTests
         {
             MedicineService ms = new MedicineService();
             bool value = ms.ReturnFalse();
-
-
             Assert.False(value);
         }
 
@@ -21,8 +19,6 @@ namespace TestQIntegrationTests
         {
             MedicineService ms = new MedicineService();
             bool value = ms.ReturnFalse2();
-
-
             Assert.False(value);
         }
     }

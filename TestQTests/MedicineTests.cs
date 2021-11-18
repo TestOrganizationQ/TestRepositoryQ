@@ -10,10 +10,9 @@ namespace TestQTests
         public void Even_number_passing_test()
         {
             MedicineService medicineService = new MedicineService();
-            int number = medicineService.GetEvenMedicine(1004);
+            int number = medicineService.GetEvenMedicine(1002);
 
             Assert.True(number % 2 == 0);
-
         }
 
         [Fact]
@@ -23,7 +22,6 @@ namespace TestQTests
             int number = medicineService.GetEvenMedicine(5);
 
             Assert.False(number % 2 == 0);
-
         }
 
         [Fact, Trait("Category", "Unit")]
@@ -33,7 +31,6 @@ namespace TestQTests
             int number = medicineService.GetOddMedicine(1003);
 
             Assert.True(number % 2 != 0);
-
         }
 
         [Fact]
@@ -53,6 +50,7 @@ namespace TestQTests
             bool value = medicineService.ReturnTrue();
 
             Assert.True(value);
+
 
         }
     }

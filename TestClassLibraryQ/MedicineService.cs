@@ -21,24 +21,22 @@ namespace TestClassLibraryQ
 
             if (x % 2 != 0)
                 return x;
-            return 2;
+            return 4;
         }
 
         public bool ReturnTrue()
         {
 
-            return 1 == 1;
+            return 1 == 4;
         }
 
         public bool ReturnFalse()
         {
-
-            return 1 == 2;
+            return 1 == 4;
         }
 
         public bool ReturnFalse2()
         {
-
             return 1 == 2;
         }
 
