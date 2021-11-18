@@ -45,5 +45,15 @@ namespace TestQTests
             Assert.False(number % 2 != 0);
 
         }
+
+        [Fact]
+        public void Return_true_passing_test()
+        {
+            MedicineService medicineService = new MedicineService();
+            bool value = medicineService.ReturnTrue();
+
+            Assert.True(value);
+
+        }
     }
 }

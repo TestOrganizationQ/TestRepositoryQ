@@ -1,4 +1,5 @@
 using System;
+using TestClassLibraryQ;
 using Xunit;
 
 namespace TestQIntegrationTests
@@ -8,7 +9,10 @@ namespace TestQIntegrationTests
         [Fact]
         public void Test1()
         {
-            Assert.True(1 == 1);
+            MedicineService ms = new MedicineService();
+            bool value = ms.ReturnFalse();
+
+            Assert.False(value);
         }
     }
 }

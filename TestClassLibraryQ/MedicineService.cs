@@ -23,9 +23,14 @@ namespace TestClassLibraryQ
             return 2;
         }
 
-        public int GetSomething(int x)
+        public bool ReturnTrue()
         {
-            return x;
+            return 1 == 1;
+        }
+
+        public bool ReturnFalse()
+        {
+            return 1 == 2;
         }
     }
 }
