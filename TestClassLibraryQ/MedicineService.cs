@@ -29,9 +29,5 @@ namespace TestClassLibraryQ
             return 1;
         }
 
-        public int Return2()
-        {
-            return 2;
-        }
     }
 }

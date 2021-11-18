@@ -30,7 +30,7 @@ namespace TestAPIQ.Controllers
             var rng = 5;
             MedicineService ms = new MedicineService();
             int num = ms.Return1();
-            num = ms.Return2();
+            num = ms.GetEvenMedicine(10);
             rng = ms.GetOddMedicine(4);
 
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
