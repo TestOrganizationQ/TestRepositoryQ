@@ -18,6 +18,7 @@ namespace TestClassLibraryQ
 
         public int GetOddMedicine(int x)
         {
+
             if (x % 2 != 0)
                 return x;
             return 2;
@@ -25,11 +26,13 @@ namespace TestClassLibraryQ
 
         public bool ReturnTrue()
         {
+
             return 1 == 1;
         }
 
         public bool ReturnFalse()
         {
+
             return 1 == 2;
         }
     }
