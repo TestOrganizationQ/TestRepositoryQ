@@ -35,5 +35,17 @@ namespace TestClassLibraryQ
 
             return 1 == 2;
         }
+
+        public bool ReturnFalse2()
+        {
+
+            return 1 == 2;
+        }
+
+        public bool ReturnFalse3()
+        {
+
+            return 1 == 2;
+        }
     }
 }
