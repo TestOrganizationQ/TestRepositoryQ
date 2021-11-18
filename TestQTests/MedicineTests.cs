@@ -30,7 +30,7 @@ namespace TestQTests
         public void Odd_number_passing_test()
         {
             MedicineService medicineService = new MedicineService();
-            int number = medicineService.GetOddMedicine(1003);
+            int number = medicineService.GetOddMedicine(1005);
 
             Assert.True(number % 2 != 0);
 
