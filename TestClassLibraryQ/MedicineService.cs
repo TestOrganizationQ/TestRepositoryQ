@@ -8,25 +8,9 @@ namespace TestClassLibraryQ
 {
     public class MedicineService
     {
-        public int GetEvenMedicine(int x)
+        public int DummyEvenNumber()
         {
-            if(x % 2 == 0)
-                return x;
-            return 1; 
-
-        }
-
-        public int GetOddMedicine(int x)
-        {
-
-            if (x % 2 != 0)
-                return x;
-            return 4;
-        }
-        
-        public int Return1()
-        {
-            return 1;
+            return 2;
         }
 
     }
