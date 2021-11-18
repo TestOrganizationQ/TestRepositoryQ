@@ -29,9 +29,9 @@ namespace TestAPIQ.Controllers
         {
             var rng = 5;
             MedicineService ms = new MedicineService();
+            int num = ms.Return1();
+            num = ms.Return2();
             rng = ms.GetOddMedicine(4);
-            bool truebool = ms.ReturnTrue();
-            bool falsebool = ms.ReturnFalse();
 
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {

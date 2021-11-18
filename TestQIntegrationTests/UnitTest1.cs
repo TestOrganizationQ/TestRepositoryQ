@@ -7,19 +7,13 @@ namespace TestQIntegrationTests
     public class UnitTest1
     {
         [Fact]
-        public void Test1()
+        public void Odd_number_failing_test()
         {
-            MedicineService ms = new MedicineService();
-            bool value = ms.ReturnFalse();
-            Assert.False(value);
-        }
+            MedicineService medicineService = new MedicineService();
+            int number = medicineService.Return1();
 
-        [Fact]
-        public void Test2()
-        {
-            MedicineService ms = new MedicineService();
-            bool value = ms.ReturnFalse2();
-            Assert.False(value);
+            Assert.True(number == 1);
+
         }
     }
 }
