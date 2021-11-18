@@ -10,9 +10,9 @@ namespace TestQIntegrationTests
         public void Test1()
         {
             MedicineService ms = new MedicineService();
-            bool value = ms.ReturnTrue();
+            bool value = ms.ReturnFalse();
 
-            Assert.True(value);
+            Assert.False(value);
         }
     }
 }
