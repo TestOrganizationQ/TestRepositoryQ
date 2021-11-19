@@ -92,5 +92,6 @@ jobs:
         shell: powershell
         run: |
           .\.sonar\scanner\dotnet-sonarscanner begin /k:"TestOrganizationQ_TestRepositoryQ" /o:"testorganizationq" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.cs.xunit.reportsPaths=artifacts/dotnet-results-TestQTests/*.trx,artifacts/dotnet-results-TestQIntegrationTests/*.trx /d:sonar.cs.opencover.reportsPaths=artifacts/opencover-results-TestQTests/coverage.opencover.xml,artifacts/opencover-results-TestQIntegrationTests/coverage.opencover.xml
+          dotnet restore
           dotnet build --configuration release
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
