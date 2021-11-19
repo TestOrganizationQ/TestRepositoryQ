@@ -6,13 +6,6 @@ namespace TestQIntegrationTests
 {
     public class UnitTest1
     {
-        [Fact]
-        public void Test1()
-        {
-            MedicineService ms = new MedicineService();
-            bool value = ms.ReturnFalse();
 
-            Assert.False(value);
-        }
     }
 }
